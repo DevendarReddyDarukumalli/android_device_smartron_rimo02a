@@ -19,7 +19,7 @@ $(call inherit-product, device/smartron/rimo02a/full_rimo02a.mk)
 
 # Inherit some common Superior OS stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rimo02a
