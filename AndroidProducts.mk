@@ -14,10 +14,10 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_rimo02a.mk
+    $(LOCAL_DIR)/lineage_rimo02a.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_rimo02a-user \
-    superior_rimo02a-userdebug \
-    superior_rimo02a-eng
+    lineage_rimo02a-user \
+    lineage_rimo02a-userdebug \
+    lineage_rimo02a-eng
 
