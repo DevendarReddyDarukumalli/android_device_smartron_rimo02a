@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
@@ -23,6 +24,9 @@ $(call inherit-product, vendor/smartron/rimo02a/rimo02a-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+GAPPS_VARIANT := mini
+
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -243,13 +247,12 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common_system \
+    ims-ext-common \
     ims_ext_common.xml
 
 # Telephony
-PRODUCT_PACKAGES += telephony-ext \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml
+
+
 
 # IPA Manager
 # PRODUCT_PACKAGES += \
@@ -315,7 +318,10 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Perf
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+
 #    QPerformance \
 #    UxPerformance
 
@@ -383,7 +389,12 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     telephony-ext \
     libminui \
-    qti-telephony-common
+    qti-telephony-common \
+qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -407,8 +418,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += telephony-ext \
-	ims-ext-common_system
+#PRODUCT_BOOT_JARS += telephony-ext \
+#	ims-ext-common_system
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
@@ -466,3 +477,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 # Model is set via init library
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.model
+

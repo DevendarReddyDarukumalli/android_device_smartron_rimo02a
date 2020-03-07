@@ -14,10 +14,10 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rimo02a.mk
+    $(LOCAL_DIR)/aosp_rimo02a.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rimo02a-user \
-    lineage_rimo02a-userdebug \
-    lineage_rimo02a-eng
+    aosp_rimo02a-user \
+    aosp_rimo02a-userdebug \
+    aosp_rimo02a-eng
 

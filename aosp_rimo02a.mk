@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -19,11 +20,11 @@ $(call inherit-product, device/smartron/rimo02a/full_rimo02a.mk)
 
 # Inherit some common Superior OS stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rimo02a
-PRODUCT_NAME := superior_rimo02a
+PRODUCT_NAME := aosp_rimo02a
 PRODUCT_BRAND := smartron
 TARGET DEVICE := rimo02a
 PRODUCT_MANUFACTURER := smartron
@@ -37,3 +38,6 @@ BUILD_FINGERPRINT= Smartron/srtphone/rimo02a:8.0.0/T5524INDURC-475/475:user/rele
 
 # Release name
 PRODUCT_RELEASE_NAME := rimo02a
+
+TARGET_GAPPS_ARCH := arm64
+
